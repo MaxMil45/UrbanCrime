@@ -4,12 +4,24 @@
         Title="Test Live Update" Height="200" Width="400">
     <Grid Margin="10">
         <StackPanel>
+            <!-- Input box for postcode -->
+            <TextBox x:Name="PostcodeInput"
+                 Width="200"
+                 Height="30"
+                 Margin="0,0,0,10"
+                 Text="Enter postcode..."
+                 GotFocus="PostcodeInput_GotFocus"
+                 LostFocus="PostcodeInput_LostFocus" />
+
+            <!-- Button to trigger the update -->
             <Button x:Name="LiveUpdateButton"
                     Content="Update Text"
                     Width="150"
                     Height="40"
-                    Click="LiveUpdateButton_Click"/>
-            <TextBlock x:Name="LiveTextBlock"
+                    Click="CheckCrime_Click"/>
+
+            <!-- Output text -->
+            <TextBlock x:Name="ResultText"
                        Margin="0,20,0,0"
                        FontSize="18"
                        Text="Waiting for update..." />
